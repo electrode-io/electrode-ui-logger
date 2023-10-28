@@ -1,0 +1,41 @@
+Invoking: clap test-only 
+[00:45:10] @xarc/run version 1.1.1 at /Users/s0s0p6u/Desktop/GTP/electrode/common/temp/node_modules/.pnpm/@xarc+run@1.1.1/node_modules/@xarc/run
+[00:45:10] node.js version v16.19.1 at /Users/s0s0p6u/nvm/nodejs/v16.19.1/bin/node
+[00:45:10] CWD is /Users/s0s0p6u/Desktop/GTP/electrode/packages/electrode-ui-logger
+[00:45:12] Loaded ./xclap.js
+[00:45:12] PATH already contains ./node_modules/.bin
+[00:45:12] Execute electrode/test-only as function
+[00:45:12] -Execute electrode/.test-only mocha -c test/spec
+
+
+  client-side logger
+    ✓ should flush the log entries
+    ✓ should combine and log entries (203ms)
+    ✓ should not send any thing to log api if nothing was logged (201ms)
+
+  server-side logger
+    ✓ should log entries
+    ✓ should throw error if request option not provided
+
+  Client/helpers
+    safeEventBuilder
+      event is invalid
+        when falsy
+          ✓ should return a safe event object
+        when empty
+          ✓ should return a safe event object
+      event type is fetch
+        when `extras` attribute exists
+          ✓ should make a safe event
+        when `extras` attribute is undefined
+          ✓ should not throw an error
+          ✓ should return a safe event
+      event type is NOT fetch
+        ✓ should avoid cicular references
+        ✓ should exclude children in props
+
+
+  12 passing (2s)
+
+[00:45:20] >Done Execute electrode/.test-only mocha -c test/spec (8.17 sec)
+[00:45:20] Done Execute electrode/test-only as function (8.18 sec)
